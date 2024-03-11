@@ -54,6 +54,7 @@ button,a{
     margin: auto;
     cursor: pointer;
 }
+/* < ================== Breakpoint ================== > */
 @media screen and (width <= 700px) {
     .container{
         grid-template-columns: 1fr;

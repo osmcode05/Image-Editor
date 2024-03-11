@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Editor</title>
+    <!-- < ================== css file ================== > -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="container">
         <div class="image">
             <div class="Box_image">
@@ -23,31 +23,31 @@
             <ul>
                 <li>
                     <label for="Saturate">Saturate</label>
-                    <input type="range" id="Saturate" min="0" max="200" value="100">
+                    <input type="range" min="0" max="200" value="100">
                 </li>                
                 <li>
                     <label for="Contrast">Contrast</label>
-                    <input type="range" id="Contrast" min="0" max="200" value="100">
+                    <input type="range" min="0" max="200" value="100">
                 </li>                
                 <li>
                     <label for="Brightness">Brightness</label>
-                    <input type="range" id="Brightness" min="0" max="200" value="100">
+                    <input type="range" min="0" max="200" value="100">
                 </li>                         
                 <li>
                     <label for="Sepia">Sepia</label>
-                    <input type="range" id="Sepia" min="0" max="200" value="0">
+                    <input type="range" min="0" max="200" value="0">
                 </li>                
                 <li>
                     <label for="Grayscale">Grayscale</label>
-                    <input type="range" id="Grayscale" min="0" max="1" step="0.01" value="0">
+                    <input type="range" min="0" max="1" step="0.01" value="0">
                 </li>                
                 <li>
                     <label for="Blur">Blur</label>
-                    <input type="range" id="Blur" min="0" max="10" step="0.1" value="0">
+                    <input type="range" min="0" max="10" step="0.1" value="0">
                 </li> 
                 <li>
                     <label for="Hue_rotate">Hue Rotate</label>
-                    <input type="range" id="Hue_rotate" min="0" max="360" value="0">
+                    <input type="range" min="0" max="360" value="0">
                 </li>                
                 <li>
                     <a download="image" id="Download_btn">Dowload</a>
@@ -56,7 +56,7 @@
             </ul>
         </div>
     </div>
-    
+    <!-- < ================== js file ================== > -->
     <script src="dist/main.js"></script>
 </body>
 </html>

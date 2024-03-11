@@ -1,15 +1,8 @@
 "use strict";
-let Saturate = document.getElementById('Saturate');
-let Contrast = document.getElementById('Contrast');
-let Brightness = document.getElementById('Brightness');
-let Sepia = document.getElementById('Sepia');
-let Grayscale = document.getElementById('Grayscale');
-let Blur = document.getElementById('Blur');
-let Hue_rotate = document.getElementById('Hue_rotate');
+let AllFilters = document.querySelectorAll('[type="range"]'); // All filters
 let Box_image = document.querySelector('.Box_image');
 let image = document.getElementById('image');
-let AllFilters = document.querySelectorAll('[type="range"]'); // All filters
-let Upload_btn = document.getElementById('upload');
+let Upload = document.getElementById('upload');
 let Download_btn = document.getElementById('Download_btn');
 let Reset_btn = document.getElementById('Reset_btn');
 const canvas = document.getElementById('canvas');
@@ -21,13 +14,13 @@ window.onload = () => {
     Box_image.style.display = 'none';
 };
 // Upload the image 
-Upload_btn.onchange = () => {
+Upload.onchange = () => {
     Reset();
     Download_btn.style.display = 'block';
     Reset_btn.style.display = 'block';
     Box_image.style.display = 'block';
     let file = new FileReader();
-    file.readAsDataURL(Upload_btn.files[0]);
+    file.readAsDataURL(Upload.files[0]);
     file.onload = () => {
         image.src = file.result;
     };
@@ -42,13 +35,13 @@ Upload_btn.onchange = () => {
 AllFilters.forEach(filter => {
     filter.addEventListener('input', () => {
         Context.filter = `
-        saturate(${Saturate.value}%)
-        contrast(${Contrast.value}%)
-        brightness(${Brightness.value}%)
-        sepia(${Sepia.value}%)
-        grayscale(${Grayscale.value})
-        blur(${Blur.value}px)
-        hue-rotate(${Hue_rotate.value}deg)
+        saturate(${AllFilters[0].value}%)
+        contrast(${AllFilters[1].value}%)
+        brightness(${AllFilters[2].value}%)
+        sepia(${AllFilters[3].value}%)
+        grayscale(${AllFilters[4].value})
+        blur(${AllFilters[5].value}px)
+        hue-rotate(${AllFilters[6].value}deg)
         `;
         Context.drawImage(image, 0, 0, canvas.width, canvas.height);
     });
