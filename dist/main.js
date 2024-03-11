@@ -5,7 +5,7 @@ let image = document.getElementById('image');
 let Upload = document.getElementById('upload');
 let Download_btn = document.getElementById('Download_btn');
 let Reset_btn = document.getElementById('Reset_btn');
-const canvas = document.getElementById('canvas');
+const canvas = document.querySelector('canvas');
 const Context = canvas.getContext('2d');
 //Hinding Reset and Dowload Buttons and Box image if there are not any image 
 window.onload = () => {

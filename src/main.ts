@@ -4,7 +4,7 @@ let image: any = document.getElementById('image') as HTMLImageElement;
 let Upload: any = document.getElementById('upload') as HTMLInputElement ;
 let Download_btn = document.getElementById('Download_btn') as HTMLLinkElement;
 let Reset_btn = document.getElementById('Reset_btn') as HTMLButtonElement ;
-const canvas = document.getElementById('canvas') as HTMLCanvasElement;
+const canvas = document.querySelector('canvas') as HTMLCanvasElement;
 const Context = canvas.getContext('2d') as CanvasRenderingContext2D;
 //Hinding Reset and Dowload Buttons and Box image if there are not any image 
 window.onload = ()=>{
